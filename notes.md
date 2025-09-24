@@ -1,6 +1,7 @@
-#### 01 - intro
+#### 1 Intro
+##### 1.2 Env preparation
 
-"docker run hello-world" command initiates a process to demonstrate that a Docker installation is functioning correctly. This command triggers a series of actions within the Docker ecosystem
+"docker run hello-world" command initiates a process to demonstrate that a Docker installation is functioning correctly. This command triggers a series of actions within the Docker ecosystem:
 
 1. 
 Docker client = command-line interface. 
@@ -31,4 +32,74 @@ bash Anaconda3- ...sh: run Anaconda
 Port: a virtual communication endpoint. Port forwarding creates a bridge between the port on your local machine and the port inside the remote machine (where Jupyter runs)
 
 When you run something inside a remote env (for example Codespaces) the service is inside that machine not on your laptop. 
+
+##### 1.4 Course overview
+Experienment tracking
+using MLflow, Model registry (model storage) & experiment tracker (metrics)
+
+ML pipelines: modularize and organize your code
+
+Model deployment:
+web service: Put the model into some ML service, for clients' use
+
+Model montoring:
+When model performance worsens, notify a human or automatically retrain the model using new data
+
+
+##### 1.5 MLOps maturity model
+https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/mlops-maturity-model
+
+Level 0. No MLOps <br>
+No automation. All code in jupyter. PoC project
+
+Level 1. DevOps, No MLOps <br>
+have unit and integration tests; CI/CD
+
+PoC to production
+
+2. Automated pipeline <br>
+training pipeline, experiment tracking, model registry, low friction deployment, DS works with engineers
+
+3. Automated deployment <br>
+easy to deploy model, model performance A/B test, model monitoring
+
+4. Full automation
+
+Not everything model in a company has to be in level 4; level 2 is already good
+
+
+#### 2 Experiment tracking and model management
+Concepts: <br>
+ML experiment: the whole process of building an ML model
+Experiment run: each trial in an ML experiment
+Run artifact: any file that is associated with an ML run
+Experiment metadata
+
+
+Tracking experiments in spreadsheets: mannual and error-prone
+
+MLflow: an open-source platform for the ML life cycle. 
+It's just a python package that can be installed with pip and that contains four main modules:
+
+Tracking, models, model registry, projects
+
+Tracking module: allows you to organize your experiments into runs and keep track of parameters, metrics, metadata, artifacts, models
+
+In addition, MLflow automatically logs extra information about the run:
+source code, version of the code (git commit), start and end time, author
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
